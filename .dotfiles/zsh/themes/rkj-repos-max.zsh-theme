@@ -19,14 +19,14 @@ ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✗"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}➦"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%}✂"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[blue]%}✈"
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %F{193}ﰚ-"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %F{193}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
 
 function mygit() {
   if [[ "$(git config --get oh-my-zsh.hide-status)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return
-        echo " %{$fg_bold[blue]%}(%{$fg[red]%}${ref#refs/heads/}$(git_prompt_short_sha)%{$fg_bold[blue]%})"
+    echo " %{$fg_bold[blue]%}(%{$fg[red]%}${ref#refs/heads/}$(git_prompt_short_sha)%{$fg_bold[blue]%})"
   fi
 }
 

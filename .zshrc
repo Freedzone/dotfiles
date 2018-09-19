@@ -59,6 +59,8 @@ __git_files () {
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
+# quick source shell
+alias sosh="source $HOME/.zshrc"
 
 # Local config
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
