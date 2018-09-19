@@ -1,7 +1,6 @@
 # vim:ft=zsh foldmethod=marker
 # remake of 'rkj-repos' OMZ bundled theme
 # git dirty indicators removed due to performance issues (on Cygwin)
-#
 
 function hg_prompt_info {
   if (( $+commands[hg] )) && grep -q "prompt" ~/.hgrc; then
@@ -30,11 +29,9 @@ function mygit() {
   fi
 }
 
-function retcode() {}
-
 # alternate prompt with git & hg
 PROMPT_SYSTEM="%{$fg_bold[green]%}%n%b%F{13}@%f%{$fg[cyan]%}%m"
-PROMPT_DIR="%{%F{11}%}%(5~|%-1~/…/%3~|%4~)"
+PROMPT_DIR="%{$fg_bold[yellow]%}%(5~|%-1~/…/%3~|%4~)"
 PROMPT_DATETIME="%{$fg[green]%}"%D{" %a %b %d, "}"%{$fg[yellow]%}"%D{" %H:%M:%S"}
 PROMPT=$'%{$fg_bold[blue]%}╓──[%{$fg_bold[blue]%}$PROMPT_SYSTEM]%{$reset_color%} - %{$fg_bold[blue]%}[$PROMPT_DIR%{$fg_bold[blue]%}]%{$reset_color%} - %{$fg_bold[blue]%}[%b$PROMPT_DATETIME%{$fg_bold[blue]%}]
 %{$fg_bold[blue]%}╙─[%{$fg_bold[magenta]%}%?%{$fg_bold[blue]%}]$(mygit)$(hg_prompt_info) %{$fg_bold[blue]%}>%{$fg_bold[cyan]%}>%{$fg_bold[green]%}>%{$reset_color%} '
