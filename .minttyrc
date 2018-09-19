@@ -1,0 +1,15 @@
+Font=FuraCode NF
+FontHeight=11
+BellType=0
+FontWeight=400
+FontSmoothing=full
+BoldAsColour=yes
+BoldAsFont=yes
+AllowBlinking=no
+ThemeFile=flat-ui
+BackgroundColour=70,70,70
+FontIsBold=no
+CtrlShiftShortcuts=yes
+AltFnShortcuts=no
+SwitchShortcuts=no
+Term=xterm-256color
