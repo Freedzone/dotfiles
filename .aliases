@@ -12,7 +12,7 @@ alias egrep='egrep --color=auto'              # show differences in colour
 alias fgrep='fgrep --color=auto'              # show differences in colour
 
 # ls
-alias ls='ls --color --group-directories-first'
+alias ls='LC_ALL=C ls --color --group-directories-first'
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -ahl'
