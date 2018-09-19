@@ -1,0 +1,8 @@
+# vim:ft=tmux
+# modification of base theme from themepack
+set -gw window-status-activity-style none
+set -g pane-active-border-fg yellow
+set -g status-right "#H #[fg=white]« #[fg=yellow]%H:%M:%S #[fg=green]%a %b %d"
+set -g window-status-format " #[bg=default,fg=red]#I#[fg=default]:#W#{?window_activity_flag,#[fg=red]* ,} "
+set -g window-status-current-format "#[bg=black,fg=colour11]#[fg=red,bold,bg=colour11]#I #[fg=default]#W #[bg=black,fg=colour11]"
+# set -g window-status-current-format "#[bg=colour14] #[fg=red,bg=yellow] #I:#[fg=default,bold]#W #[bg=colour14] "

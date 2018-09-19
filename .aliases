@@ -1,0 +1,37 @@
+# vim:ft=zsh foldmethod=marker
+
+# Dotfiles manager
+alias dots='/usr/bin/git --git-dir=$HOME/.dotcfg/ --work-tree=$HOME'
+
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
+
+alias grep='grep --color'                     # show differences in colour
+alias egrep='egrep --color=auto'              # show differences in colour
+alias fgrep='fgrep --color=auto'              # show differences in colour
+
+# ls
+alias ls='ls --color --group-directories-first'
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -ahl'
+
+alias ..='cd ..'
+
+# tmux
+alias tma='tmux attach'
+
+# {{{ Functions
+colortest() {
+    for i in {0..255} ; do
+        printf "\x1b[48;5;%sm%3d\e[0m " "$i" "$i"
+        if (( i == 15 )) || (( i > 15 )) && (( (i-15) % 6 == 0 )); then
+            printf "\n";
+        fi
+    done
+}
+# }}}
+
+# Local aliases
+[[ -f $HOME/.aliases.local ]] && source $HOME/.aliases.local

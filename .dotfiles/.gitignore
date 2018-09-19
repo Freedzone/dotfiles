@@ -1,0 +1,7 @@
+.dotcfg
+
+install.*
+# swaps
+*.swp
+[._]*.sw[a-p]
+[._]sw[a-p]

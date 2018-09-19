@@ -1,0 +1,15 @@
+[submodule "/home/Freedzone/.dotfiles/zsh/themes/powerlevel9k"]
+	path = /home/Freedzone/.dotfiles/zsh/themes/powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k.git
+[submodule ".dotfiles/bin/mintty-colors"]
+	path = .dotfiles/bin/mintty-colors
+	url = https://github.com/joakimkarlsson/mintty-colors
+[submodule ".dotfiles/tmux/themes/tmux-themepack"]
+	path = .dotfiles/tmux/themes/tmux-themepack
+	url = https://github.com/jimeh/tmux-themepack
+[submodule ".dotfiles/tmux/tpm"]
+	path = .dotfiles/tmux/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule ".dotfiles/zsh/plugins/zsh-syntax-highlighting"]
+	path = .dotfiles/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
