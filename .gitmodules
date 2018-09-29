@@ -1,5 +1,5 @@
-[submodule "/home/Freedzone/.dotfiles/zsh/themes/powerlevel9k"]
-	path = /home/Freedzone/.dotfiles/zsh/themes/powerlevel9k
+[submodule ".dotfiles/zsh/themes/powerlevel9k"]
+	path = .dotfiles/zsh/themes/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule ".dotfiles/bin/mintty-colors"]
 	path = .dotfiles/bin/mintty-colors

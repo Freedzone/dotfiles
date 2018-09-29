@@ -9,8 +9,8 @@ export ZSH_CUSTOM=$DOTFILES/zsh
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-# enable command auto-correction.
-ENABLE_CORRECTION="true"
+# disable command auto-correction.
+# ENABLE_CORRECTION="true"
 
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -23,7 +23,19 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(colored-man-pages git vi-mode zsh-syntax-highlighting)
+
+# add pacman plugin if arch
+if command -v pacman >/dev/null 2>&1; then
+  plugins=("${plugins[@]}" archlinux)
+fi
+
+# {{{ Options
+# Make Vi mode transitions faster
+export KEYTIMEOUT=1
+# Extended globbing
+setopt extendedglob
+# }}}
 
 # {{{ Visuals
 ZSH_THEME="rkj-repos-max"

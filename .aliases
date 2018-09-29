@@ -22,6 +22,12 @@ alias ..='cd ..'
 # tmux
 alias tma='tmux attach'
 
+# for arch
+# only if installed
+if pac="$(type -p "pacman")" || [[ -z $pac ]]; then
+    alias pac='pacman'
+fi
+
 # {{{ Functions
 colortest() {
     for i in {0..255} ; do

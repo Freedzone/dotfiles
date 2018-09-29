@@ -1,0 +1,10 @@
+[Scheme]
+Name=flat-ui
+ColorForeground=#ecf0f1
+ColorBackground=#181818
+ColorCursor=#D35400
+ColorBold=#ECF0F1
+ColorPalette= #2c3e50;#c0392b;#27ae60;#f39c12;#2980b9;#8e44ad;#16a085;#bdc3c7;#34495e;#e74c3c;#2ecc71;#f1c40f;#3498db;#9b59b6;#1abc9c;#ecf0f1;
+TabActivityColor=#D35400
+ColorSelectionBackground=#ECF0F1
+ColorSelection=#2C3E50
