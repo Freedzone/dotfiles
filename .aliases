@@ -1,5 +1,4 @@
 # vim:ft=zsh foldmethod=marker
-
 # Dotfiles manager
 alias dots='/usr/bin/git --git-dir=$HOME/.dotcfg/ --work-tree=$HOME'
 
@@ -17,10 +16,17 @@ alias l='ls'
 alias la='ls -a'
 alias ll='ls -ahl'
 
-alias ..='cd ..'
-
 # tmux
-alias tma='tmux attach'
+alias tma='tmux attach -t'
+alias tml='tmux ls'
+
+# other
+alias ..='cd ..'
+alias less='less -i' # case insensitive search
+alias rmr='rm -r'
+alias py='python'
+alias py3='python3'
+alias v='gvim'
 
 # for arch
 # only if installed

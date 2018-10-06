@@ -21,6 +21,7 @@
 [alias]
 	a = add --all
 	ai = add -i
+	au = add -u
 	#############
 	ap = apply
 	as = apply --stat

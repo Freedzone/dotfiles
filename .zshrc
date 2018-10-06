@@ -23,7 +23,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages git vi-mode zsh-syntax-highlighting)
+plugins=(
+  colored-man-pages
+  git
+# vi-mode # disabled until fix bash shortcutts override and ZSH clever history
+  zsh-syntax-highlighting
+)
 
 # add pacman plugin if arch
 if command -v pacman >/dev/null 2>&1; then
@@ -37,12 +42,6 @@ export KEYTIMEOUT=1
 setopt extendedglob
 # }}}
 
-# {{{ Visuals
-ZSH_THEME="rkj-repos-max"
-# }}}
-
-source $ZSH/oh-my-zsh.sh
-
 # {{{ Setup environment
 
 # Load $fg & co with color codes
@@ -51,6 +50,12 @@ autoload -U colors && colors
 export PATH=$PATH:${HOME}/bin
 export EDITOR=vim
 # }}}
+
+# {{{ Visuals
+ZSH_THEME="rkj-repos-max"
+# }}}
+
+source $ZSH/oh-my-zsh.sh
 
 # {{{ Speed up autocompletion
 zstyle ':completion:*' accept-exact '*(N)'
@@ -66,13 +71,14 @@ __git_files () {
 }
 # }}}
 
+# quick source shell
+alias sosh="source $HOME/.zshrc"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases
-# quick source shell
-alias sosh="source $HOME/.zshrc"
 
 # Local config
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local

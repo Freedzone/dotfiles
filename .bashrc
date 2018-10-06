@@ -50,15 +50,24 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+git_prompt='/usr/share/git/git-prompt.sh'
+if [[ -f $git_prompt ]]; then
+    source $git_prompt
+    GIT_PS1_SHOWDIRTYSTATE=1
+    GIT_PS1_SHOWUNTRACKEDFILES=1
+    GIT_PS1_SHOWUPSTREAM='name'
+    GIT_PS1_DESCRIBE_STYLE='describe'
+fi
+
 # PS1 function with git integration
 # https://github.com/jaguililla/dotfiles/blob/master/bash/bashconfig
 bold=$(tput bold)
 reset=$(tput sgr0)
-PROMPT_BEFORE="\[$bold\]\[$(tput setaf 6)\][\t]\[$(tput setaf 2)\] \[$(tput setaf 2)\]\u\[$(tput setaf 9)\]@\[$(tput setaf 2)\]\h \[$(tput setaf 3)\]\w\[$(tput setaf 1)\]\[$(tput setaf 6)\]"
+PROMPT_BEFORE="\[$bold\]\[$(tput setaf 6)\][\t]\[$(tput setaf 2)\] \[$(tput setaf 2)\]\u\[$(tput setaf 9)\]@\[$(tput setaf 2)\]\h \[$(tput setaf 3)\]\w\[$(tput setaf 1)\]\[$(tput setaf 9)\]"
 PROMPT_AFTER="\\n\[$(tput setaf 5)\]\\$> \[$reset\]"
 
 if [[ -n $(declare -F __git_ps1) ]]; then
-    PROMPT_COMMAND='__git_ps1 "$PROMPT_BEFORE" "$PROMPT_AFTER"'
+    PROMPT_COMMAND='__git_ps1 "$PROMPT_BEFORE" "$PROMPT_AFTER" '
 else
     PS1=$PROMPT_BEFORE$PROMPT_AFTER
 fi
