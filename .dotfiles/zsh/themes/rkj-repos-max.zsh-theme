@@ -2,6 +2,10 @@
 # remake of 'rkj-repos' OMZ bundled theme
 # git dirty indicators removed due to performance issues (on Cygwin)
 
+function vi_mode_prompt_info() {
+    echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/}"
+}
+
 function hg_prompt_info {
   if (( $+commands[hg] )) && grep -q "prompt" ~/.hgrc; then
     hg prompt --angle-brackets "\
@@ -28,6 +32,10 @@ function mygit() {
     echo " %{$fg_bold[blue]%}(%{$fg[red]%}${ref#refs/heads/}$(git_prompt_short_sha)%{$fg_bold[blue]%})"
   fi
 }
+
+# Vi cmd mode
+MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_color%}"
+RPS1='$(vi_mode_prompt_info)' # right prompt
 
 # alternate prompt with git & hg
 PROMPT_SYSTEM="%{$fg_bold[green]%}%n%b%F{13}@%f%{$fg[cyan]%}%m"

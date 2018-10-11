@@ -26,7 +26,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
   colored-man-pages
   git
-# vi-mode # disabled until fix bash shortcutts override and ZSH clever history
   zsh-syntax-highlighting
 )
 
@@ -55,7 +54,26 @@ export EDITOR=vim
 ZSH_THEME="rkj-repos-max"
 # }}}
 
+# {{{ Widgets
+
+## Vi mode indicator
+# Updates editor information when the keymap changes.
+function zle-keymap-select() {
+  zle reset-prompt
+  zle -R
+}
+
+# Add widgets
+zle -N zle-keymap-select
+# }}}
+
+# start oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# source all additions
+for i in $ZSH_CUSTOM/*.zsh; do
+  source $i
+done
 
 # {{{ Speed up autocompletion
 zstyle ':completion:*' accept-exact '*(N)'
