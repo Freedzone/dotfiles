@@ -22,7 +22,7 @@ ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✗"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[blue]%}➦"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[magenta]%}✂"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[blue]%}✈"
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %F{193}"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$reset_color%}%{$fg[white]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
 
 function mygit() {
@@ -38,7 +38,7 @@ MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_c
 RPS1='$(vi_mode_prompt_info)' # right prompt
 
 # alternate prompt with git & hg
-PROMPT_SYSTEM="%{$fg_bold[green]%}%n%b%F{13}@%f%{$fg[cyan]%}%m"
+PROMPT_SYSTEM="%{$fg_bold[green]%}%n%b%{$fg[magenta]%}@%f%{$fg[cyan]%}%m"
 PROMPT_DIR="%{$fg_bold[yellow]%}%(5~|%-1~/…/%3~|%4~)"
 PROMPT_DATETIME="%{$fg[green]%}"%D{" %a %b %d, "}"%{$fg[yellow]%}"%D{" %H:%M:%S"}
 PROMPT=$'%{$fg_bold[blue]%}╓──[%{$fg_bold[blue]%}$PROMPT_SYSTEM]%{$reset_color%} - %{$fg_bold[blue]%}[$PROMPT_DIR%{$fg_bold[blue]%}]%{$reset_color%} - %{$fg_bold[blue]%}[%b$PROMPT_DATETIME%{$fg_bold[blue]%}]

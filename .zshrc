@@ -91,6 +91,7 @@ __git_files () {
 
 # quick source shell
 alias sosh="source $HOME/.zshrc"
+alias zle-keys="bindkey"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
