@@ -71,7 +71,7 @@ zle -N zle-keymap-select
 source $ZSH/oh-my-zsh.sh
 
 # source all additions
-for i in $ZSH_CUSTOM/*.zsh; do
+for i in $ZSH_CUSTOM/*.zsh(.N); do
   source $i
 done
 

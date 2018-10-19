@@ -7,6 +7,8 @@ function vi_mode_prompt_info() {
 }
 
 function hg_prompt_info {
+  if [[ ! -f ~/.hgrc ]]
+    return
   if (( $+commands[hg] )) && grep -q "prompt" ~/.hgrc; then
     hg prompt --angle-brackets "\
 <hg:%{$fg[magenta]%}<branch>%{$reset_color%}><:%{$fg[magenta]%}<bookmark>%{$reset_color%}>\
