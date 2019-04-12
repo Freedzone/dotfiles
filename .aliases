@@ -44,6 +44,16 @@ colortest() {
         fi
     done
 }
+
+# help for builtins
+bman() {
+    if [[ $ZSH_NAME ]]; then
+        shl='zshall'
+    elif [[ $BASH ]]; then
+        shl='bash'
+    fi
+    LESS=--pattern="^ {7}$1 " man $shl
+}
 # }}}
 
 # Local aliases
