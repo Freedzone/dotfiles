@@ -28,6 +28,7 @@ alias ppath='echo $PATH | sed "s/:/\n/g"' # echo path nicely
 alias py='python'
 alias py3='python3'
 alias v='gvim'
+alias vroot='sudo -E gvim' # root vim with preserved environment
 
 # for arch
 # only if installed

@@ -16,12 +16,18 @@
 	added = green
 	changed = yellow
 	untracked = red
+[format]
+	pretty = format:%C(auto)%h %d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[log]
+	date = relative
 [push]
 	default = current
 [alias]
 	a = add --all
 	ai = add -i
 	au = add -u
+	#############
+	aliases = !git config -l | grep alias | cut -c 7-
 	#############
 	ap = apply
 	as = apply --stat
@@ -75,8 +81,10 @@
 	#############
 	g = grep -p
 	#############
-	l = log --oneline
-	lg = log --oneline --graph --decorate
+	l = log
+	ll = log --numstat
+	lg = log --graph --decorate
+	lgf = log --format=full
 	#############
 	ls = ls-files
 	lsf = !git ls-files | grep -i
