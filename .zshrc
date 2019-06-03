@@ -70,6 +70,12 @@ zle -N zle-keymap-select
 # start oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# {{{ oh-my-zsh overwrites
+# Autopushd disable, make it behave like in BASH
+unsetopt autopushd
+unsetopt pushdignoredups
+# }}}
+
 # source all additions
 for i in $ZSH_CUSTOM/*.zsh(.N); do
   source $i

@@ -2,6 +2,9 @@
 # Dotfiles manager
 alias dots='/usr/bin/git --git-dir=$HOME/.dotcfg/ --work-tree=$HOME'
 
+# Dirstack
+alias d='dirs -v'
+
 # Default to human readable figures
 alias df='df -h'
 alias du='du -h'
@@ -48,9 +51,9 @@ colortest() {
 
 # help for builtins
 bman() {
-    if [[ $ZSH_NAME ]]; then
+    if [ $ZSH_NAME ]; then
         shl='zshall'
-    elif [[ $BASH ]]; then
+    elif [ $BASH ]; then
         shl='bash'
     fi
     LESS=--pattern="^ {7}$1 " man $shl
