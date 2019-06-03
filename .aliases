@@ -52,7 +52,7 @@ colortest() {
 # help for builtins
 bman() {
     if [ $ZSH_NAME ]; then
-        shl='zshall'
+        shl='zshbuiltins'
     elif [ $BASH ]; then
         shl='bash'
     fi
