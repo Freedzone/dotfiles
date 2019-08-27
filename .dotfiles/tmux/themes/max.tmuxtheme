@@ -1,7 +1,7 @@
 # vim:ft=tmux
 
 # Status bar
-set -g status-bg default
+set -g status-style bg=default
 set -g status-position bottom
 set -g status-interval 2
 set -g status-justify centre # center align window list
@@ -18,20 +18,15 @@ set -g status-right-style bg=default,fg=default
 set -g status-right "#[fg=cyan]#H #[fg=white]« #[fg=yellow]%H:%M #[fg=green]%a %d"
 
 ## windows
-setw -g window-status-bg default
-setw -g window-status-fg white
-setw -g window-status-current-bg default
-setw -g window-status-current-fg default
+setw -g window-status-style bg=default,fg=white
 setw -g window-status-format "#[bg=black,fg=black,bold] #I #[bg=default,fg=black] #W#{?window_activity_flag,#[fg=yellow]* ,} "
+setw -g window-status-current-style bg=default,fg=default
 setw -g window-status-current-format "#[bg=cyan,fg=white] #I #[bg=default,fg=cyan] #W "
 setw -g window-status-activity-style none
 
 # Panel borders
-set -g pane-active-border-fg cyan
-set -g pane-active-border-bg default
-set -g pane-border-fg black
-set -g pane-border-bg default
+set -g pane-active-border-style bg=default,fg=cyan
+set -g pane-border-style bg=default,fg=black
 
 # Message text
-set-option -g message-bg default
-set-option -g message-fg default
+set-option -g message-style bg=default,fg=white
