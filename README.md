@@ -19,6 +19,12 @@ wget -O - https://raw.githubusercontent.com/Freedzone/dotfiles/master/.dotfiles/
 ```
 2. Follow `oh-my-zsh` installation
 
+### Recommended soft
+These tools are not mandatory, but still very useful. Also dotfiles has some configs for them.
+* [FZF](https://github.com/junegunn/fzf) - fuzzy finder (files, cmd history, commits, etc.)
+* [TLDR](https://github.com/tldr-pages/tldr) - simplified man pages with many examples
+* [ncdu](https://github.com/rofl0r/ncdu) - du tool with nice graphics
+
 ## How it looks?
 ###### Linux (Manjaro, xfce4-terminal)
 ![Linux demo][pic-nix]

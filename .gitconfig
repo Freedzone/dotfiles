@@ -3,7 +3,10 @@
 	email = max@max.max
 [core]
 	autocrlf = false
+	safecrlf = false
+	eol = crlf
 	editor = vim
+	filemode = false
 	pager = less -FRSX
 [color]
 	branch = auto
@@ -84,7 +87,7 @@
 	l = log
 	ll = log --numstat
 	lg = log --graph --decorate
-	lgf = log --format=full
+	lgf = log --format=medium
 	#############
 	ls = ls-files
 	lsf = !git ls-files | grep -i
